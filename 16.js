@@ -98,6 +98,64 @@ console.log(filterRangeInPlace(arr, 1, 5));
 console.log(arr);
 */
 
-let arr = [5, 2, 1, -10, 8];
+// Оставить уникальные элементы массива
 
-console.log(arr.sort((a, b) => b - a));
+// Пусть arr – массив строк.
+
+// Напишите функцию unique(arr), которая возвращает массив, содержащий только уникальные элементы arr.
+
+// Например:
+
+// let strings = ["кришна", "кришна", "харе", "харе",
+//   "харе", "харе", "кришна", "кришна", ":-O"
+// ];
+
+// alert( unique(strings) ); // кришна, харе, :-O
+/*
+function unique(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[i] == arr[j]) {
+        arr.splice(j, 1);
+      }
+    }
+  }
+  return arr;
+}
+
+let strings = [
+  "кришна",
+  "кришна",
+  "харе",
+  "харе",
+  "харе",
+  "харе",
+  "кришна",
+  "кришна",
+  ":-O",
+];
+
+console.log(unique(strings)); // кришна, харе, :-O
+*/
+
+// Получить средний возраст
+
+// Напишите функцию getAverageAge(users), которая принимает массив объектов со свойством age и возвращает средний возраст.
+/*
+let vasya = { name: "Вася", age: 25 };
+let petya = { name: "Петя", age: 30 };
+let masha = { name: "Маша", age: 29 };
+
+let arr = [vasya, petya, masha];
+
+function getAverageAge(users) {
+  let arrAge = [];
+  for (let i = 0; i < arr.length; i++) {
+    arrAge[i] = users[i].age;
+  }
+
+  return arrAge.reduce((sum, current) => sum + current) / arrAge.length;
+}
+
+console.log(getAverageAge(arr));
+*/

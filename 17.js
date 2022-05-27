@@ -18,7 +18,7 @@
 // P.S. Здесь мы используем строки, но значения могут быть любого типа.
 
 // P.P.S. Используйте Set для хранения уникальных значений.
-
+/*
 function unique(arr) {
   return Array.from(new Set(arr));
 }
@@ -36,3 +36,4 @@ let values = [
 ];
 
 console.log(unique(values));
+*/

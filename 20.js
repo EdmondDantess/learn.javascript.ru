@@ -46,3 +46,66 @@ let getWeekDay = (day) => {
 let date = new Date(); //3 января 2012 года
 getWeekDay(date);
 */
+
+// Какой день месяца был много дней назад?
+
+// Создайте функцию getDateAgo(date, days), возвращающую число, которое было days дней назад от даты date.
+
+// К примеру, если сегодня двадцатое число, то getDateAgo(new Date(), 1) вернёт девятнадцатое и getDateAgo(new Date(), 2)
+//  – восемнадцатое.
+
+// Функция должна надёжно работать при значении days=365 и больших значениях:
+
+// let date = new Date(2015, 0, 2);
+
+// alert( getDateAgo(date, 1) ); // 1, (1 Jan 2015)
+// alert( getDateAgo(date, 2) ); // 31, (31 Dec 2014)
+// alert( getDateAgo(date, 365) ); // 2, (2 Jan 2014)
+// P.S. Функция не должна изменять переданный ей объект date.
+/*
+let getDateAgo = (date, days) => {
+  return new Date(date.getFullYear(), date.getMonth(), date.getDate() - days);
+};
+
+let date = new Date();
+console.log(getDateAgo(date, 2));
+*/
+
+// Сколько сегодня прошло секунд?
+
+// Напишите функцию getSecondsToday(), возвращающую количество секунд с начала сегодняшнего дня.
+
+// Например, если сейчас 10:00, и не было перехода на зимнее/летнее время, то:
+
+// getSecondsToday() == 36000 // (3600 * 10)
+// Функция должна работать в любой день, т.е. в ней не должно быть конкретного значения сегодняшней даты.
+/*
+let getSecondsToday = () => {
+  let date = new Date();
+  return date.getHours() * 3600 + date.getMinutes() * 60 + date.getSeconds();
+};
+
+console.log(getSecondsToday());
+*/
+
+// Сколько секунд осталось до завтра?
+
+// Создайте функцию getSecondsToTomorrow(), возвращающую количество секунд до завтрашней даты.
+
+// Например, если сейчас 23:00, то:
+
+// getSecondsToTomorrow() == 3600
+// P.S. Функция должна работать в любой день, т.е. в ней не должно быть конкретного значения сегодняшней даты.
+/*
+let getSecondsToTomorrow = () => {
+  let date = new Date();
+  let resultTime = Math.round(
+    (new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1) - date) /
+      1000
+  );
+
+  return resultTime;
+};
+
+console.log(getSecondsToTomorrow());
+*/
